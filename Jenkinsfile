@@ -38,7 +38,7 @@ timestamps {
 			unstash "build_mac"
 			unstash "build_win"
 			unstash "build_lin"
-			archiveArtifacts artifacts: 'output/*.exe', 'output/*.out, excludes: 'output/*.md'  <<<<<<<<
+			archiveArtifacts artifacts: 'output/*.exe', 'output/*.out
 		}
 	}
 }
