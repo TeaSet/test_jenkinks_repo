@@ -38,7 +38,7 @@ timestamps {
 		node("master") {
 			unstash "build_mac"
 			unstash "build_win"
-			unstash "build_lin"
+			unstash "build_linux"
 			archiveArtifacts artifacts: 'output/*.exe', 'output/*.out'
 		}
 	}
