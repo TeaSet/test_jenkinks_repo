@@ -3,10 +3,10 @@
 def buildUnix(label, stashName) {
 	node(label) {
 		checkout scm
-		sh '''#!/bin/bash -le
+		sh '''#!/bin/sh
 			gcc -o hello hello.c
 		'''
-		stash name: stashName
+		stash name: "${stashName}"
 	}
 }
 
