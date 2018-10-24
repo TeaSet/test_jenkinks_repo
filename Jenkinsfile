@@ -2,6 +2,7 @@
 
 def buildUnix(label, stashName) {
 	node(label) {
+		sh "mkdir -p output"
 		checkout scm
 		sh '''#!/bin/sh
 			gcc hello.c -o hello_${label}.out
@@ -38,7 +39,7 @@ timestamps {
 			unstash "build_mac"
 			unstash "build_win"
 			unstash "build_lin"
-			archiveArtifacts artifacts: 'output/*.exe', 'output/*.out
+			archiveArtifacts artifacts: 'output/*.exe', 'output/*.out'
 		}
 	}
 }
