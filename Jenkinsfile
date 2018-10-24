@@ -2,6 +2,7 @@
 
 def buildUnix(label, stashName) {
 	node(label) {
+		checkout scm
 		sh '''#!/bin/bash -le
 			gcc 
 		'''
