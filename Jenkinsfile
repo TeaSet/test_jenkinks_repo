@@ -41,7 +41,7 @@ timestamps {
 			unstash "build_mac"
 			unstash "build_win"
 			unstash "build_linux"
-			archiveArtifacts artifacts: 'output/*.*'
+			archiveArtifacts artifacts: 'output/*.out'
 			deleteDir()
 		}
 	}
